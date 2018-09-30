@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>T.T</title>
+	<style type="text/css">
+		body{perspective:800px;background:black}
+		#eye{position:absolute; top:200px; left:720px}
+		
+		#neye{position:absolute; top:318px; left:958px; animation:rotation 0.1s linear infinite; animation-play-state:paused;}
+		
+		#MHD{width:700px; height:300px; position:absolute; top:-80px; left:10px; color:white; font-size:100pt; color:red; line-height:200pt;}
+		
+		#order{position:absolute; top:130px; left:930px; color:white}
+		
+		#lt{text-decoration:line-through}
+		
+		#gifbox{position:absolute; left:400px;}
+		
+		.DIV{
+			width:100px; height:100px; border-radius:100px; margin:auto; float:left; margin:50px; background:red; animation:topdown 2s ease-in-out infinite alternate; animation-play-state:running;
+		}
+		
+		#typewriter{position:absolute; top:15px; left:15px; color:white; letter-spacing: 2px; animation: mymove 5s infinite; animation-play-state:paused;}
+		
+		@keyframes topdown{
+			from{margin-top:10px;background:black;border-radius:100px;}
+			50%{background:white}
+			to{margin-top:20px;background:black; transform:rotate3D(0.8,1,0.5,360deg);border-radius:0px;}}
+			
+		@keyframes rotation{
+			from{}			to{transform:rotate(360deg)}
+			}
+		
+		@keyframes mymove {
+    50% {letter-spacing: 40px;}
+}
+		
+	</style>
+</head>
+
+<body>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	<div class="DIV"></div>
+	
+	<div id="MHD">
+	<h1><u>MANG-HAM</u></h1>
+	</div>
+	
+	<div id="eye"> <img src="img/eye.png" style="width:800px; height:auto"></div>
+	
+	<div id="neye"> <img src="img/neye.png" style="width:287px; height:auto"></div>
+	
+	<div id="typewriter">
+	주제를 생각해는 건 너무 어렵다.<br>
+	옛날엔 걍 가만히 있어도 아이디어가 막 나왔는데<br>
+	이젠 <font id="bcl" color="blue"><b><u>눈</u></b></font>을 아무리 굴려도 아무 생각도 안 난다.<br>
+	9시간째 똑같은 화면만 보고 있는데...<br>
+	나 망한걸까 ㅠ.ㅠ
+	</div>
+	
+	<div id="order"><h1><font color="blue"><b><u>눈</u></b></font>을 찾아서 눌러보던가ㅠㅠ</h1></div>
+
+	<div id="gifbox" style="width: 0px;">
+		<img id="gsource" src="./img/dr.gif" style="width: 0px; height: 0px; transition: all 1s">
+		<font color="white"></font>
+	</div>
+	
+	<script type="text/javascript">
+		
+		var toggle = "off";
+		bcl.onclick = function(){
+			if(toggle == "off"){
+					neye.style.animationPlayState="running"
+					typewriter.style.animationPlayState="running"
+				
+					toggle = "on";
+				}
+			else {
+					neye.style.animationPlayState="paused"
+					typewriter.style.animationPlayState="paused"
+				
+					toggle = "off";
+				}
+}
+
+		var toggle = "off";
+		neye.onclick = function(){
+			if(toggle == "off"){
+					gsource.style.width = "600px";
+					gsource.style.height = "450px";
+
+					toggle = "on";
+				}
+			else {
+					gsource.style.width = "0px";
+					gsource.style.height = "0px";
+
+				
+					toggle = "off";
+				}
+}
+
+
+		</script>
+</body>
+</html>
